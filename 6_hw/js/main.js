@@ -23,52 +23,48 @@ function getNumber() {
 function getOperation(arr) {
     let operationArray = [`sort`, `%3`, `join`, `min`, `max`];
     let answer = prompt(`Choose operation: ${operationArray}`)
-    let Operation;
+    let operation;
 
     switch (answer) {
         case operationArray[0] :
-            Operation = `[${sortArray(arr)}]`;
+            operation = `[${sortArray(arr)}]`;
         break;
 
         case operationArray[1] :
             getMultThree(arr);
-            Operation = `${newArray}`;
+            operation = `${newArray}`;
         break;
 
         case operationArray[2] :
-            Operation = `${getJoinString(arr)}`;
+            operation = `${getJoinString(arr)}`;
         break; 
 
         case operationArray[3] :
-            Operation = `${getMinNumber(arr)}`;
+            operation = `${getMinNumber(arr)}`;
         break;
 
         case operationArray[4] :
-            Operation = `${getMaxNumber(arr)}`;
+            operation = `${getMaxNumber(arr)}`;
         break;
     };
 
-    let resultOperation;
-    resultOperation = `    Your operation: ${answer}
-    Result: ${Operation}`
+    let resultOperation = `    Your operation: ${answer}
+    Result: ${operation}`
     return resultOperation;
 };
 
 function getJoinString(arr) {
-    let result;
-    result = prompt(`Select divisor`);
+    let result = prompt(`Select divisor`);
     return arr.join(`${result}`);
 };
 
 function getMinNumber(arr) {
-    let result;
-    result = sortArray(arr);
+    let result = sortArray(arr);
     return result[0];
 };
 
 function getMaxNumber(arr) {
-    let result;
-    result = sortArray(arr);
+    let result = sortArray(arr);
     return result[arr.length - 1];
 };
 
