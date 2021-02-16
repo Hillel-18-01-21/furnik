@@ -1,4 +1,3 @@
-let newArray = [];
 showAnswer();
 
 function showAnswer() {
@@ -31,8 +30,7 @@ function getOperation(arr) {
         break;
 
         case operationArray[1] :
-            getMultThree(arr);
-            operation = `${newArray}`;
+            operation = `${getMultThree(arr)}`;
         break;
 
         case operationArray[2] :
@@ -70,17 +68,13 @@ function getMaxNumber(arr) {
 
 
 function getMultThree(arr) {
-    arr.map(e => {
-    e = +e;
-     if(e % 3 === 0) {
-        newArray.push(e);
-     }})
+    return arr.filter(e => +e % 3 == 0);
 };
 
 function sortArray(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
         for (let j = 0; j < i; j++) {
-            if (arr[j] > arr[j +1]) {
+            if (arr[j] > arr[j + 1]) {
                 let swap = arr[j];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = swap;
