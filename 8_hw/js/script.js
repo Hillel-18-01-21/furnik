@@ -3,7 +3,7 @@ const typeFig = document.querySelector('.type');
 const figure = document.querySelector('.figure');
 
 colorFig.addEventListener('change', onColorFig);
-typeFig.addEventListener('click', onTypeFig)
+typeFig.addEventListener('change', onTypeFig)
 
 function onTypeFig() {
     figure.classList.remove('circle', 'rectangle', 'squire');

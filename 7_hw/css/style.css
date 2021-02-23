@@ -1,89 +1,87 @@
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background: #d0b0b0;
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background: #d0b0b0;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: #ffffff;
-    width: 600px;
-    height: 100%;
-    border-radius: 8px;
-    padding: 40px 0;
-    margin: 80px auto;
-    text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: #ffffff;
+	width: 600px;
+	height: 100%;
+	border-radius: 8px;
+	padding: 40px 0;
+	margin: 80px auto;
+	text-align: center;
 }
 
 .list-title {
-    font-size: 48px;
-    font-weight: 600;
+	font-size: 48px;
+	font-weight: 600;
 }
 
 .list-input {
-    display: block;
-    width: 300px;
-    height: 36px;
-    border: none;
-    outline: none;
-    border-bottom: 2px solid #acabab;
-    color: black;
-    font-size: 16px;
-    transition: 0.5s;
-
+	display: block;
+	width: 300px;
+	height: 36px;
+	border: none;
+	outline: none;
+	border-bottom: 2px solid #acabab;
+	color: black;
+	font-size: 16px;
+	transition: 0.5s;
 }
 
 .list-input:focus {
-    border-bottom: 2px solid black;
+	border-bottom: 2px solid black;
 }
 
 ::placeholder {
-    color: #acabab;
+	color: #acabab;
 }
 
-.list-btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    width: 120px;
-    height: 50px;
-    outline: none;
-    border: none;
-    border-radius: 4px;
-    background: black;
-    text-decoration: none;
-    color: white;
-    margin-top: 24px;
-    transition: 0.3s;
+.list-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	width: 120px;
+	height: 50px;
+	outline: none;
+	border: none;
+	border-radius: 4px;
+	background: black;
+	text-decoration: none;
+	color: white;
+	margin-top: 24px;
+	transition: 0.3s;
 }
 
 .list-btn:hover {
-    opacity: 0.875;
-    cursor: pointer;
+	opacity: 0.875;
+	cursor: pointer;
 }
 .list {
-    padding: 0;
-    text-align: left;
-    width: 260px;
+	padding: 0;
+	text-align: left;
+	width: 260px;
 }
 
 li {
-    font-size: 20px;
-    font-weight: 400;	
-    /* list-style-type: none; */
-    padding: 0;
-    margin-top: 8px;
+	font-size: 20px;
+	font-weight: 400;
+	/* list-style-type: none; */
+	padding: 0;
+	margin-top: 8px;
 }
 
 li input {
-    width: 20px;
-    height: 20px;
-    border: 2px solid #acabab;
+	width: 20px;
+	height: 20px;
+	border: 2px solid #acabab;
 }
-

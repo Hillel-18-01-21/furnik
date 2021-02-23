@@ -2,7 +2,7 @@ const btnList = document.querySelector('.list-btn');
 const inputList = document.querySelector('.list-input');
 const list = document.querySelector('.list');
 
-btnList.addEventListener("click", onBtnClick);
+btnList.addEventListener('click', onBtnClick);
 
 function onBtnClick() {
     const newElement = document.createElement('li');
