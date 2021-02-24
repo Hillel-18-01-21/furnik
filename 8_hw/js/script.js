@@ -1,15 +1,15 @@
-const colorFig = document.querySelector('.color');
-const typeFig = document.querySelector('.type');
-const figure = document.querySelector('.figure');
+const inputEl = document.querySelector('input');
+const typeEl = document.querySelector('.type');
+const figureEl = document.querySelector('.figure');
 
-colorFig.addEventListener('change', onColorFig);
-typeFig.addEventListener('change', onTypeFig)
+inputEl.addEventListener('change', onColorChange);
+typeEl.addEventListener('change', onTypeChange);
 
-function onTypeFig() {
-    figure.classList.remove('circle', 'rectangle', 'squire');
-    figure.classList.add(typeFig.value);
+function onTypeChange() {
+    figureEl.classList.remove('circle', 'rectangle', 'squire');
+    figureEl.classList.add(typeEl.value);
 };
 
-function onColorFig() {
-    figure.style.background = colorFig.value;
+function onColorChange() {
+    figureEl.style.background = inputEl.value;
 };
