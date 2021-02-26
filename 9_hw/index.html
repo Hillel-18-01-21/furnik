@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <select id="type_operation">
+            <option selected value="Choose operation" disabled>Choose operation</option>
+            <option value="sum">Sum</option>
+            <option value="different">Different</option>
+        </select>
+        <div class="input_container">
+            <input type="text" id="first_operand">
+            <input type="text" id="second_operand">
+        </div>
+        <button id="btn_result">Calculate</button>
+    
+        <ul id="list">
+    
+        </ul>
+    </div>
+
+    <script type="template" id="li_template">
+        <span>{{text}}</span>
+    </script>
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
