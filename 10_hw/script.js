@@ -1,6 +1,6 @@
 const result = calc(4);
 result.add(9);
-result.diff(3);
+result.sub(3);
 result.div(2);
 result.mult(6);
 result.getResult();
@@ -9,24 +9,24 @@ result.getResult();
 
 function calc(arg) {
     return {
-        add: function(sum) {
-            return arg += sum;
+        add: function(addendum) {
+            arg += addendum;
         },
 
-        diff: function(diff) {
-            return arg -= diff;
+        sub: function(subtrahend) {
+            arg -= subtrahend;
         },
 
-        div: function(div) {
-            return arg /= div;
+        div: function(divider) {
+            arg /= divider;
         }, 
 
-        mult: function(mult) {
-            return arg *= mult;
+        mult: function(multiplier) {
+            arg *= multiplier;
         },
 
         getResult: function() {
-            alert(arg)
+            return alert(arg);
         }
     };
 };
