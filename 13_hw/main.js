@@ -1,5 +1,7 @@
-let hamburger = new Hamburger('big', 'cheese', 'salad');
+let hamburger = new Hamburger('big', 'cheese', 'salad', 'potato', 'spice');
 console.log(hamburger.getPrice);
+console.log(hamburger.getCalories);
+
 
 function Hamburger(size, toping) {
 
@@ -25,7 +27,7 @@ function Hamburger(size, toping) {
     };
 
     Array.from(arguments).forEach(e => {
-        switch(toping) {
+        switch(e) {
             case 'cheese':
                 price.push(10);
                 calories.push(20);
