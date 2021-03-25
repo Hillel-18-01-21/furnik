@@ -8,12 +8,10 @@ class Accordion {
     }
 
     show() {
-        const titleEls = document.querySelectorAll('.title');
+        this.container.addEventListener('click', this.onAccordionClick)
+    }
 
-        titleEls.forEach(e => {
-            e.addEventListener('click', () => {
-                e.nextElementSibling.classList.toggle('show');
-            })
-        })
+    onAccordionClick(e) {
+        e.target.nextElementSibling.classList.toggle('show');
     }
 }
