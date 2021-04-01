@@ -24,31 +24,6 @@ form {
     padding: 100px;
 }
 
-#done {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    text-align: center;
-    width: 300px;
-    height: 300px;
-    background: white;
-    border: 2px solid green;
-    border-radius: 4px;
-}
-
-#error {
-    display: none;
-    width: 180px;
-    height: 36px;
-
-    border: 2px solid red;
-    background-color: salmon;
-    margin-bottom: 20px;
-    text-align: center;
-    padding-top: 15px;
-}
-
 input {
     padding: 0;
     margin: 0;

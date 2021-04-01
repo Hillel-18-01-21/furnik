@@ -1,4 +1,4 @@
-const url = 'https://reqres.in/api/login.'
+const url = 'https://reqres.in/api/login';
 const containerEl = document.getElementById('container');
 const formEl = document.querySelector('form');
 const buttonEl = document.getElementById('button'); 
@@ -6,19 +6,19 @@ const errorEl = document.getElementById('error');
 const loginEl = document.getElementById('login');
 const passwordEl = document.getElementById('password');
 
-const obj = {
-    login: loginEl.value,
-    password: passwordEl.value
-}
 
 buttonEl.addEventListener('click', getInfoBlock);
 
 function getInfoBlock() {
-    getInfo('POST', url, obj)
+    getInfo('POST', url)
 }
 
-function getInfo(method, url, obj) {
+function getInfo(method, url) {
     const xhr = new XMLHttpRequest()
+
+    let obj = Object.create(null);
+    obj.login = loginEl.value;
+    obj.password = passwordEl.value;
 
     if(loginEl.value == "" || passwordEl.value == "") {
         return
@@ -27,8 +27,8 @@ function getInfo(method, url, obj) {
     xhr.open(method, url)
     
     xhr.onload = () => {
-        if(xhr.status >= 300) {
-            errorEl.style.display = 'block'
+        if(xhr.status !== 200) {
+            alert('Данные не найдены');
             passwordEl.value = null;
         } else {
             passwordEl.value = null
