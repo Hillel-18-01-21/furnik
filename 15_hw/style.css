@@ -24,10 +24,43 @@ form {
     padding: 100px;
 }
 
+.done-active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    width: 200px;
+    height: 36px;
+    margin-bottom: 20px;
+    border: 2px solid green;
+    background-color: springgreen;
+    border-radius: 4px;
+}
+
+.error-active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    width: 200px;
+    height: 36px;
+    margin-bottom: 20px;
+    border: 2px solid red;
+    background-color: salmon;
+    border-radius: 4px;
+
+}
+
+.disabled {
+    display: none;
+}
+
+
+
 input {
     padding: 0;
     margin: 0;
-    width: 180px;
+    width: 200px;
     height: 26px;
     margin-bottom: 16px;
 }

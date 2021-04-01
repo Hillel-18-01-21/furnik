@@ -5,37 +5,38 @@ const buttonEl = document.getElementById('button');
 const errorEl = document.getElementById('error');
 const loginEl = document.getElementById('login');
 const passwordEl = document.getElementById('password');
+const doneEl = document.getElementById('congratulation');
 
 
 buttonEl.addEventListener('click', getInfoBlock);
 
 function getInfoBlock() {
-    getInfo('POST', url)
-}
+    getInfo('POST', url);
+};
 
 function getInfo(method, url) {
-    const xhr = new XMLHttpRequest()
+    const xhr = new XMLHttpRequest();
 
     let obj = Object.create(null);
     obj.login = loginEl.value;
     obj.password = passwordEl.value;
 
     if(loginEl.value == "" || passwordEl.value == "") {
-        return
-    }
+        return;
+    };
 
-    xhr.open(method, url)
+    xhr.open(method, url);
     
     xhr.onload = () => {
         if(xhr.status !== 200) {
-            alert('Данные не найдены');
+            errorEl.classList.remove('disabled');
             passwordEl.value = null;
         } else {
-            passwordEl.value = null
-            loginEl.value = null
-            alert('Ваши данные успешно получены')
-        }
-    }
+            doneEl.classList.remove('disabled');
+            passwordEl.value = null;
+            loginEl.value = null;
+        };
+    };
 
     xhr.send(JSON.stringify(obj));
 }
