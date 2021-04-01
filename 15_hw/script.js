@@ -33,6 +33,7 @@ function getInfo(method, url) {
             passwordEl.value = null;
         } else {
             doneEl.classList.remove('disabled');
+            formEl.classList.add('disabled');
             passwordEl.value = null;
             loginEl.value = null;
         };
