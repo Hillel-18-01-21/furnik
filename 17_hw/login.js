@@ -1,4 +1,4 @@
-// const 
+
 class LogIn {
     constructor(container) {
         this.containerEl = container;
@@ -20,8 +20,8 @@ class LogIn {
 
         this.promise = fetch(this.url, {
             method: 'POST',
-            header: {
-                'Content-Type': 'application/json;charset=utf-8'
+            headers: {
+                'content-type': 'application/json'
             },
             body: JSON.stringify({
                 "email": this.loginEl.value,
@@ -31,7 +31,7 @@ class LogIn {
 
         console.log(this.promise)
         this.promise.then(response => {
-            if(response.status.ok) {
+            if(!response.ok) {
                 document.querySelector('#error').classList.remove('d-none');
                 this.passwordEl.value = null;
             } else {
