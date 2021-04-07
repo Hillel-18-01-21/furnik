@@ -12,8 +12,8 @@ class UsersList {
             this.listItemTextEl.innerText = 
             `name: ${e.first_name}
             surname: ${e.last_name}
-            email: ${e.email}`
-            this.listItemEl.prepend(this.avatar)
+            email: ${e.email}`;
+            this.listItemEl.prepend(this.avatar);
             this.listItemEl.append(this.listItemTextEl);
             this.listEl.append(this.listItemEl); 
     }
@@ -23,7 +23,6 @@ class UsersList {
         this.promise.then(response => response.json())
         .then(response => {
             const newArray = response.data;
-            console.log(newArray)
             newArray.forEach(obj => {
                 this.createListItem(obj);
             });

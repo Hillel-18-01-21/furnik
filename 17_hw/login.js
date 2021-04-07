@@ -2,7 +2,7 @@
 class LogIn {
     constructor(container) {
         this.containerEl = container;
-        this.loginContainerEl = this.containerEl.querySelector('#login')
+        this.loginContainerEl = this.containerEl.querySelector('#login');
         this.url = "https://reqres.in/api/login";
     }
 
@@ -29,25 +29,21 @@ class LogIn {
             }),
         });
 
-        console.log(this.promise)
         this.promise.then(response => {
             if(!response.ok) {
                 document.querySelector('#error').classList.remove('d-none');
                 this.passwordEl.value = null;
             } else {
-                this.loginContainerEl.classList.add('d-none')
+                this.loginContainerEl.classList.add('d-none');
                 this.containerEl.querySelector('#list-container').classList.remove('d-none');
-                list.init()
-            }
-            
-        })
-        
-    }
+            }; 
+        });   
+    };
 
     init() {
         this.formEl = this.containerEl.querySelector('form');
 
         this.formEl.addEventListener('submit', this.handlePost);
         this.formEl.addEventListener('submit', this.resetDefault);
-    }
+    };
 }
