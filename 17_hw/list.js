@@ -1,7 +1,7 @@
-class UsersList {
+class ListComponent {
     constructor(container, url) {
         this.containerEl = container;
-        this.listContainerEl = this.containerEl.querySelector('#list-container');
+        this.listContainerEl = document.querySelector('#list-container');
         this.promise =  fetch(url);
     }
 

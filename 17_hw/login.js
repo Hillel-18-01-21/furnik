@@ -1,8 +1,8 @@
 
-class LogIn {
+class LoginComponent {
     constructor(container) {
         this.containerEl = container;
-        this.loginContainerEl = this.containerEl.querySelector('#login');
+        this.loginContainerEl = document.querySelector('#login');
         this.url = "https://reqres.in/api/login";
     }
 
