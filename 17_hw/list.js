@@ -1,30 +1,31 @@
 class UsersList {
     constructor(container, url) {
-        this.containerEl = container.querySelector('#list-container');
+        this.containerEl = container;
+        this.listContainerEl = this.containerEl.querySelector('#list-container');
         this.promise =  fetch(url);
     }
 
-    createListItem(e) {
-        this.listItemEl = document.createElement('li');
-            this.listItemTextEl = document.createElement('p');
-            this.avatar = document.createElement('img');
-            this.avatar.src = e.avatar;
-            this.listItemTextEl.innerText = 
-            `name: ${e.first_name}
-            surname: ${e.last_name}
-            email: ${e.email}`;
-            this.listItemEl.prepend(this.avatar);
-            this.listItemEl.append(this.listItemTextEl);
-            this.listEl.append(this.listItemEl); 
+    pushItemToList(e) {
+        const listItemEl = document.createElement('li');
+        const listItemTextEl = document.createElement('p');
+        const avatar = document.createElement('img');
+        avatar.src = e.avatar;
+        listItemTextEl.innerText = 
+        `name: ${e.first_name}
+        surname: ${e.last_name}
+        email: ${e.email}`;
+        listItemEl.prepend(avatar);
+        listItemEl.append(listItemTextEl);
+        this.listEl.append(listItemEl); 
     }
 
     init() {
-        this.listEl = this.containerEl.querySelector('#list');
+        this.listEl = this.listContainerEl.querySelector('#list');
         this.promise.then(response => response.json())
         .then(response => {
             const newArray = response.data;
             newArray.forEach(obj => {
-                this.createListItem(obj);
+                this.pushItemToList(obj);
             });
         });
     };

@@ -11,7 +11,7 @@ class LogIn {
         evt.preventDefault();
     }
 
-    handlePost = () => {
+    handleLogin = () => {
         this.loginEl = this.loginContainerEl.querySelector('#loginInput');
         this.passwordEl = this.loginContainerEl.querySelector('#passwordInput');
         if(this.loginEl.value == "" || this.passwordEl.value == "") {
@@ -43,7 +43,7 @@ class LogIn {
     init() {
         this.formEl = this.containerEl.querySelector('form');
 
-        this.formEl.addEventListener('submit', this.handlePost);
+        this.formEl.addEventListener('submit', this.handleLogin);
         this.formEl.addEventListener('submit', this.resetDefault);
     };
 }
