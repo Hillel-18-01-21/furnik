@@ -8,7 +8,7 @@ class Accordion {
     }
 
     show() {
-        this.container.addEventListener('click', this.onAccordionClick)
+        this.container.addEventListener('click', this.onAccordionClick.bind(this))
     }
 
     onAccordionClick(e) {
